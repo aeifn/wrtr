@@ -2,6 +2,10 @@
 
 {% block content %}
 
+<h1>WRTR</h1>
+<p>
+Here anybody can post their text and get public permanent url
+</p>
 <form method="POST">
 	{% csrf_token %}
 	<p>Title</p>
@@ -9,7 +13,7 @@
 	<p>Text</p>
 	<textarea name="text"></textarea>
 	<p>
-	<input type="submit">
+	<input type="submit" value="Make it!">
 	</p>
 </form>
 <hr>
