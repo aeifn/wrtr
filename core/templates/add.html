@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
-{% block content %}
+{% block title %}WRTR{% endblock %}
 
-<h1>WRTR</h1>
+{% block content %}
 <pre>
 Here anybody can post their plain text without ability to edit or delete, and then get public permanent url on it.
 You can then get that text in browser or in console, i.e. 
@@ -16,5 +16,7 @@ curl <a href="http://wrtr.gq/1/">http://wrtr.gq/1/</a>
 	</p>
 </form>
 <hr>
+<pre>
 <a href="https://github.com/aeifn/wrtr/">GitHub</a>
+</pre>
 {% endblock %}
