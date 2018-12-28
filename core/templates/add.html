@@ -3,14 +3,13 @@
 {% block content %}
 
 <h1>WRTR</h1>
-<p>
-Here anybody can post their text and get public permanent url
-</p>
+<pre>
+Here anybody can post their plain text without ability to edit or delete, and then get public permanent url on it.
+You can then get that text in browser or in console, i.e. 
+curl <a href="http://wrtr.gq/1/">http://wrtr.gq/1/</a>
+</pre>
 <form method="POST">
 	{% csrf_token %}
-	<p>Title</p>
-	<input name="title"/>
-	<p>Text</p>
 	<textarea name="text"></textarea>
 	<p>
 	<input type="submit" value="Make it!">

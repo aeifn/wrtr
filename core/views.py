@@ -13,10 +13,8 @@ def article(request, id):
 
 def add(request):
     if request.method == "POST":
-        title = request.POST.get('title')
         text = request.POST.get('text')
         article = Article()
-        article.title = title
         article.text = text
         article.save()
         return redirect('article', article.id)
