@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from core.models import Article
+from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
@@ -7,11 +8,8 @@ def index(request):
 
 def article(request, id):
     article = Article.objects.get(id=id)
-    context = {
-        'title': article.title,
-        'text': article.text,
-        }
-    return render(request, 'article.html', context)
+    text = article.text
+    return HttpResponse(text, content_type="text/plain")
 
 def add(request):
     if request.method == "POST":
